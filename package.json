@@ -1,0 +1,21 @@
+{
+  "name": "warbuilder-backend",
+  "version": "1.0.0",
+  "description": "WarBuilder backend built with node and using MongoDB",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/berninup/warbuilder-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/berninup/warbuilder-backend/issues"
+  },
+  "homepage": "https://github.com/berninup/warbuilder-backend#readme"
+}
