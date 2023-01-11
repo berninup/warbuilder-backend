@@ -10,3 +10,13 @@ unitRouter.get('/', (req, res) => {
     })
 })
 
+// Delete Unit TODO
+
+// Update Unit TODO
+
+// Crate New Unit
+unitRouter.post('/', (req, res) => {
+    Unit.create(req.body, (error, unit) => {
+        res.json(unit)
+    })
+})
