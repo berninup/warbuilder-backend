@@ -10,9 +10,32 @@ abilityRouter.get('/', (req, res) => {
     })
 })
 
-// Delete Ability TODO
+// Delete Ability
+abilityRouter.delete('/:id', (req, res) => {
+    Ability.findByIdAndDelete(req.params.id, (error, ability) => {
+        res.json(ability)
+    })
+})
 
-
-// Update Ability TODO
+// Update Ability
+abilityRouter.put('/:id', (req, res) => {
+    Ability.findByIdAndUpdate(req.params.id, req.body, (error, updatedAbility) => {
+        res.json(updatedAbility)
+    })
+})
 
 // Create New Ability
+abilityRouter.post('/', (req, res) => {
+    Ability.create(req.body, (error, ability) => {
+        res.json(ability)
+    })
+})
+
+// Find Ability By ID
+abilityRouter.get('/:id', (req,res) => {
+    Unit.findById(req.params.id, (error, ability) => {
+        res.json(ability)
+    })
+})
+
+module.exports = abilityRouter

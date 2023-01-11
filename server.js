@@ -5,6 +5,7 @@ require('dotenv').config()
 const cors = require('cors')
 
 const unitRouter = require('./controllers/unitRouter')
+const abilityRouter = require('./controllers/abilityRouter')
 
 const {PORT = 3001, DATABASE_URL } = process.env
 const app = express()
@@ -24,6 +25,7 @@ app.use(cors())
 
 // Routes
 app.use('/unit', unitRouter)
+app.use('/ability', abilityRouter)
 
 
 // PORT listening
