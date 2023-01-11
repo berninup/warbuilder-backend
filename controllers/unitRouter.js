@@ -11,10 +11,15 @@ unitRouter.get('/', (req, res) => {
 })
 
 // Delete Unit TODO
+unitRouter.delete('/:id', (req, res) => {
+    Unit.findByIdAndDelete(req.params.id, (error, unit) => {
+        res.json(unit)
+    })
+})
 
 // Update Unit TODO
 
-// Crate New Unit
+// Create New Unit
 unitRouter.post('/', (req, res) => {
     Unit.create(req.body, (error, unit) => {
         res.json(unit)
