@@ -27,6 +27,18 @@ const unitSchema = new mongoose.Schema({
     }],
     img: String,
     flavor: String,
+    hp: {
+        type: String,
+        required:true
+    },
+    movement: {
+        type: String,
+        required:true
+    },
+    range: {
+        type: String,
+        required:true
+    },
     rank: {
         type: String,
         required: true
