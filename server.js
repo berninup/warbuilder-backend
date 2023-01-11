@@ -4,6 +4,7 @@ const express = require('express')
 require('dotenv').config()
 const cors = require('cors')
 
+const unitRouter = require('./controllers/unitRouter')
 
 const {PORT = 3001, DATABASE_URL } = process.env
 const app = express()
@@ -19,6 +20,10 @@ mongoose.connection
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 app.use(cors())
+
+
+// Routes
+app.use('/unit', unitRouter)
 
 
 // PORT listening

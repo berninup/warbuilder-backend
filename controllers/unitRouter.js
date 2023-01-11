@@ -20,3 +20,5 @@ unitRouter.post('/', (req, res) => {
         res.json(unit)
     })
 })
+
+module.exports = unitRouter
